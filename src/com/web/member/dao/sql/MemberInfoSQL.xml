@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC     
+    "-//mybatis.org//DTD Mapper 3.0//EN"    
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.web.member.dao.MemberInfoDao">
+     
+     <select id="queryMemberCount" resultType="java.lang.Integer" parameterType="Map">
+         select count(1) from tab_user where name = #{user} and password = #{pwd}
+     </select>
+
+</mapper>
